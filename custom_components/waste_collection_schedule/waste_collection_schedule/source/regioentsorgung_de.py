@@ -105,9 +105,7 @@ def resolve_option(field_name, value, options):
     if value in options:
         return value
 
-    normalized_options = {
-        normalize_option_value(option): option for option in options
-    }
+    normalized_options = {normalize_option_value(option): option for option in options}
     normalized_value = normalize_option_value(value)
 
     if normalized_value in normalized_options:
@@ -163,7 +161,9 @@ class Source:
         r.encoding = "utf-8"
 
         form_state = parse_form_state(r.text)
-        street = resolve_option("street", self.street, form_state.get_options("Strasse"))
+        street = resolve_option(
+            "street", self.street, form_state.get_options("Strasse")
+        )
 
         payload = {
             "ApplicationName": "com.athos.kd.regioentsorgung.CheckAbfuhrtermineModel",
