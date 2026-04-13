@@ -14,6 +14,11 @@ DESCRIPTION = "RegioEntsorgung Städteregion Aachen"
 URL = "https://regioentsorgung.de"
 TEST_CASES = {
     "Merzbrück": {"city": "Würselen", "street": "Merzbrück", "house_number": 200},
+    "Krefelder Straße": {
+        "city": "Würselen",
+        "street": "Krefelder Straße",
+        "house_number": 10,
+    },
 }
 
 API_URL = "https://tonnen.regioentsorgung.de/WasteManagementRegioentsorgung/WasteManagementServlet"
